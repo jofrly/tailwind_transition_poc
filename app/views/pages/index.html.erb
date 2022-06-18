@@ -1,0 +1,15 @@
+<div data-controller="toggle">
+  <button
+    type="button"
+    class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm"
+    data-action="click->toggle#show"
+  >
+    Toggle modal
+  </button>
+
+  <%= render "shared/modal",
+             modal_data: "data-toggle-target=modal",
+             backdrop_data: "data-toggle-target=backdrop",
+             panel_data: "data-toggle-target=panel"
+  %>
+</div>
